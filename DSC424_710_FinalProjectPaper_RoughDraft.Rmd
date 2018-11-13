@@ -15,7 +15,7 @@ output:
     toc: false
 fontsize: 12pt
 graphics: yes
-bibliography: [sources_2.bib]
+bibliography: [sources.bib]
 biblio-style: apalike
 link-citations: yes
 
@@ -1515,5 +1515,7 @@ Please find the figures referenced throughout this paper below:
 \end{figure}
 
 \FloatBarrier
+
+-----
 
 # References
