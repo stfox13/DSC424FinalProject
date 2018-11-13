@@ -1,7 +1,7 @@
 ---
 title: |
   | Advanced Data Analysis (DSC424-710)
-  | Final Project Rough Draft (Version 0.4)
+  | Final Project Rough Draft (Version 0.5)
 author: "Louis Huang, Mark Wismer, Michal Chowaniak, Ryan Patrick, Sidney Fox"
 date: \today{}
 header-includes:
@@ -1647,7 +1647,7 @@ Please find the figures referenced throughout this paper below:
 \begin{figure}[h!]
   \centering
   \includegraphics{VI_CCA1.png}
-  \caption{Scree Plot}
+  \caption{Cluster Representation}
 \end{figure}
 
 \begin{figure}[h!]
