@@ -317,7 +317,7 @@ PCASet.k5 <- kmeans(PCASet.std, centers = 5, iter.max = 500,
 health.pc <- princomp(PCASet.std, cor = T)
 
 ## 3d plot of k = 3,5,6
-colors <- brewer.pal(n = 6, name = "Spectral")
+colors <- brewer.pal(n = 6, name = "Set2")
 pc <- data_frame(health.pc$scores[, 1], health.pc$scores[, 
     2], health.pc$scores[, 3], PCASet.k6$cluster)
 colnames(pc) <- c("pc1", "pc2", "pc3", "cluster")
@@ -333,7 +333,7 @@ p <- plot_ly(pc,
                       zaxis = list(title = "pc3")))
 p
 
-colors <- brewer.pal(n = 5, name = "Spectral")
+colors <- brewer.pal(n = 5, name = "Set2")
 pc <- data_frame(health.pc$scores[, 1], health.pc$scores[, 
     2], health.pc$scores[, 3], PCASet.k5$cluster)
 colnames(pc) <- c("pc1", "pc2", "pc3", "cluster")
@@ -343,7 +343,7 @@ p <- plot_ly(pc, x = ~pc1, y = ~pc2, z = ~pc3, color = ~cluster,
     yaxis = list(title = "pc2"), zaxis = list(title = "pc3")))
 p
 
-colors <- brewer.pal(n = 3, name = "Spectral")
+colors <- brewer.pal(n = 3, name = "Set2")
 pc <- data_frame(health.pc$scores[, 1], health.pc$scores[, 
     2], health.pc$scores[, 3], PCASet.k3$cluster)
 colnames(pc) <- c("pc1", "pc2", "pc3", "cluster")
@@ -381,7 +381,7 @@ dt3 %>% group_by(cluster) %>% table() %>% prop.table(.,
     2)
 
 ## 3d plot of FHICOST using 3 principal components
-colors <- brewer.pal(n = 6, name = "Spectral")
+colors <- brewer.pal(n = 6, name = "Set2")
 pc <- data_frame(health.pc$scores[, 1], health.pc$scores[, 
     2], health.pc$scores[, 3], data$FHICOST)
 colnames(pc) <- c("pc1", "pc2", "pc3", "FHICOST")
@@ -392,7 +392,7 @@ p <- plot_ly(pc, x = ~pc1, y = ~pc2, z = ~pc3, color = ~FHICOST,
 p
 
 ## rescale by the size of FHICOST level
-colors <- brewer.pal(n = 6, name = "Spectral")
+colors <- brewer.pal(n = 6, name = "Set2")
 dt <- as.numeric(data$FHICOST) + 1
 pc <- data_frame(health.pc$scores[, 1], health.pc$scores[, 
     2], health.pc$scores[, 3], dt)
@@ -411,7 +411,7 @@ data <- within(data, {
     y3[FHICOST > 3] <- "high"
 })
 
-colors <- brewer.pal(n = 3, name = "Spectral")
+colors <- brewer.pal(n = 3, name = "Set2")
 pc <- data_frame(health.pc$scores[, 1], health.pc$scores[, 
     2], health.pc$scores[, 3], data$y3)
 colnames(pc) <- c("pc1", "pc2", "pc3", "FHICOST")
@@ -458,7 +458,7 @@ data <- within(data, {
     y4[FHICOST > 1] <- "high"
 })
 
-colors <- brewer.pal(n = 2, name = "Spectral")
+colors <- brewer.pal(n = 2, name = "Set2")
 pc <- data_frame(health.pc$scores[, 1], health.pc$scores[, 
     2], health.pc$scores[, 3], data$y4)
 colnames(pc) <- c("pc1", "pc2", "pc3", "FHICOST")
