@@ -1638,7 +1638,7 @@ Please find the figures referenced throughout this paper below:
 
 \FloatBarrier
 
-## Canonical Correlation Analysis
+## Cluster Analysis
 
 \begin{figure}[h!]
   \centering
@@ -1667,7 +1667,7 @@ Please find the figures referenced throughout this paper below:
 \begin{figure}[h!]
   \centering
   \includegraphics{VI_CCA5.png}
-  \caption{Cluster Representation}
+  \caption{All Data Points Representation}
 \end{figure}
 
 \begin{figure}[h!]
