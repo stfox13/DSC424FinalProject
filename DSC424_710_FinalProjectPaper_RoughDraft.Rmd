@@ -153,6 +153,8 @@ The factor analysis did show that 29 variables within the study can be used to p
 
 The first cluster analysis tested _k_ with a range from two to ten to find the best _k_ to do the analysis. From the cluster figure1(screeplot of Within-groups sum-of-squares), one can determine that setting _k_ equal to three and five might be good candidates. Since the response variable _FHICOST_ has six levels, the final analysis was run on three different _k_ s - 3, 5, and 6. The visualizations of the cluster analysis were plotted using three significant principal components. The clusters are split clearly, as shown in figures 16 through 19 in the _Visualization Appendix_. If one plotted assigned color to the points by the levels of _FHICOST_, the points are not easily separated, according to cluster-figure5. Refactoring _FHICOST_ was a necessary step and after refactoring, one can finally start to identify patterns within the data. 
 
+The kmeans cluster analysis using _k_ equals to 3 is the final choice. The total withness is 710876.3 and the betweeness is 225214.7.
+
 Cluster 1 can be named as small size family with normal health condition and living condition. They have the most proportion of low cost in health and medical care. This kind of family might have fewer people and they are in normal health condition and without too much disabilities.
 Cluster 2 can be named as big size family with stable source of income and good heath condition. This kind of big family need to cover all family members’ health cost so it’s much more than other clusters. They also have enough health insurance to cover their cost.
 Cluster 3 can be named as medium size family with some family members in poor health condition or disability. This family has much more problems with living. They might have more old people who can’t work but need to be taken care of. So this kind of family will spend more money in health care than cluster 1.
@@ -442,7 +444,7 @@ dt5 %>% group_by(FHICOST) %>% table() %>% prop.table(.,
 dt3 %>% group_by(FHICOST) %>% table() %>% prop.table(., 
     1)
 dt3 %>% group_by(FHICOST) %>% table() %>% prop.table(., 
-    2)
+    2)    
 
 # According to cluster analysis above, it is quite
 # difficult to cluster different FHICOST very
@@ -499,6 +501,10 @@ dt3 %>% group_by(FHICOST) %>% table() %>% prop.table(.,
 # who pay more in healthcare.
 
 PCASet.k3$centers
+# Withiness
+PCASet.k3["tot.withinss"]
+# Betweeness
+PCASet.k3["betweenss"]
 
 # If we look at the centers of three clusters by
 # kmeans using k = 3.
